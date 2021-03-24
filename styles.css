@@ -26,6 +26,54 @@ a:hover{
     color:var(--primary);
 }
 
+#presentation p, h4, h2{
+    text-align: left;
+}
+
+#presentation{
+    min-height: 100vh;
+}
+
+#presentation h4{
+    margin-bottom: 5vh;
+}
+
+#presentation h2 {
+    color: var(--secondary);
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.profile img{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--secondary);
+    margin: 3vh 0 5vh 0;
+}
+
+@media(max-width: 700px){
+    #presentation h2 {
+        font-size: 40px;
+    }
+
+    .profile img{
+        width: 120px;
+        height: 120px;
+    }
+}
+
+section{
+    padding: 5vh 5vw;
+}
+
+#info{
+    background-color: var(--secondary);
+}
+
+
+/*Accordion*/
 .btn-link:hover, .btn-link:focus{
     text-decoration: none;
 }
@@ -45,36 +93,6 @@ a:hover{
 
 .card-header[aria-expanded="true"] {    
     background-color: var(--light);
-}
-
-#presentation{
-   min-height: 100vh;
-}
-
-#presentation h4{
-    margin-bottom: 5vh;
-}
-
-#presentation h2 {
-    color: var(--secondary);
-    font-weight: bold;
-}
-
-.profile img{
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--secondary);
-    margin: 3vh 0 5vh 0;
-}
-
-section{
-    padding: 5vh 5vw;
-}
-
-#info{
-    background-color: var(--secondary);
 }
 
 #accordion section{
@@ -112,7 +130,6 @@ li{
     text-align: left;
 }
 
-
 .card{
     margin: 4vh 2vw;
     border: 1px solid black;
@@ -132,6 +149,8 @@ li{
     color: var(--third) ;
 }
 
+
+/*Scroll down btn*/
 #btnScrollDown{
     font-size: 55px;
     transition: 0.3s;
@@ -139,6 +158,7 @@ li{
     display: inline-block;
     -webkit-animation: slide-top 5s linear infinite alternate both;
 	        animation: slide-top 5s linear infinite alternate both;
+    text-align: center;
 }
 
 #btnScrollDown:hover{
