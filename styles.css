@@ -30,23 +30,32 @@ a:hover{
     text-decoration: none;
 }
 
-.card-header-title:hover, .card-header-title:focus{
+.card-header:hover, .card-header:focus{
+    background-color: var(--light);
+    cursor: pointer;
+}
+
+.card-header:hover .card-header-title{
     font-weight: 1000;
 }
 
-.card-header .btn-link[aria-expanded="true"] .card-header-title{
+.card-header[aria-expanded="true"] .card-header-title{
     font-weight: 1000;
+}
+
+.card-header[aria-expanded="true"] {    
+    background-color: var(--light);
 }
 
 #presentation{
    min-height: 100vh;
 }
 
-#presentation h3{
+#presentation h4{
     margin-bottom: 5vh;
 }
 
-#presentation h1 {
+#presentation h2 {
     color: var(--secondary);
     font-weight: bold;
 }
