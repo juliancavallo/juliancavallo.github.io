@@ -4,9 +4,9 @@
 
 :root{
     --primary: #465462; /*strong*/
-    --secondary: #626a9e; /*info background*/
-    --third: #fff; /*sections background*/
-    --light: #2C353E; /*font*/
+    --secondary: #626a9eab; /*info background*/
+    --third: #ffffffb0; /*sections background*/
+    --fourth: #242b31; /*font*/
 }
 
 body{
@@ -14,11 +14,16 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     font-size: 18px;
-    background-color: var(--third) ;
+    background:linear-gradient(white, rgba(33, 103, 160, 0.383)),url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: screen;
 }
 
 p, h1, h2, h3, h4, h5, a, li{
-    color: var(--light);
+    color: var(--fourth);
+    font-weight: 500;
+    letter-spacing: 2px;
 }
 
 a:hover{
@@ -40,7 +45,7 @@ a:hover{
 
 #presentation h2 {
     color: var(--secondary);
-    font-weight: 400;
+    font-weight: 800;
     font-size: 50px;
 }
 
@@ -51,17 +56,6 @@ a:hover{
     border-radius: 50%;
     border: 4px solid var(--secondary);
     margin: 3vh 0 5vh 0;
-}
-
-@media(max-width: 700px){
-    #presentation h2 {
-        font-size: 40px;
-    }
-
-    .profile img{
-        width: 120px;
-        height: 120px;
-    }
 }
 
 section{
@@ -79,7 +73,7 @@ section{
 }
 
 .card-header:hover, .card-header:focus{
-    background-color: var(--light);
+    background-color: var(--fourth);
     cursor: pointer;
 }
 
@@ -92,7 +86,7 @@ section{
 }
 
 .card-header[aria-expanded="true"] {    
-    background-color: var(--light);
+    background-color: var(--fourth);
 }
 
 #accordion section{
@@ -133,7 +127,9 @@ li{
 .card{
     margin: 4vh 2vw;
     border: 1px solid black;
-    box-shadow: var(--light) 5px 5px 8px;
+    box-shadow: var(--fourth) 5px 5px 8px;
+    background-color: transparent;
+    overflow: hidden;
 }
 
 .card-header{
@@ -187,3 +183,18 @@ li{
     }
   }
   
+
+  @media(max-width: 700px){
+    #presentation h2 {
+        font-size: 40px;
+    }
+
+    .profile img{
+        width: 120px;
+        height: 120px;
+    }
+    
+    .card-header h5{
+        font-size: medium;
+    }
+}
