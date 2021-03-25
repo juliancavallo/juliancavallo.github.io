@@ -198,3 +198,37 @@ li{
         font-size: medium;
     }
 }
+
+
+/*Projects*/
+#projects{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.project{
+    padding: 5px;
+    margin: 15px;
+    background-color: var(--third);
+    width: 300px;
+    border-radius: 15px;
+}
+
+.project:hover{
+    transform: translateX(-3px);
+    
+    box-shadow: var(--fourth) 5px 5px 8px;
+}
+
+.project img{
+    margin: 10px 5px;
+    object-fit: cover;
+    width: 270px;
+}
+
+.github-link:hover{
+    font-weight: bold;
+    color: var(--fourth);
+}
