@@ -209,6 +209,10 @@ li{
     .card-header h5{
         font-size: medium;
     }
+
+    .programming-languajes img{
+        margin: 15px 20px;
+    }
 }
 
 
