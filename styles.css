@@ -33,7 +33,7 @@ a:hover{
 }
 
 /*Presentation*/
-#presentation p, h4, h2{
+#presentation p, h4, h1{
     text-align: left;
 }
 
@@ -41,10 +41,9 @@ a:hover{
     min-height: 100vh;
 }
 
-#presentation h2 {
-    color: var(--secondary);
-    font-weight: 800;
-    font-size: 50px;
+#presentation h1 {
+    color: var(--primary);
+
 }
 
 .profile img{
@@ -73,7 +72,7 @@ section{
 }
 
 .programming-languajes img{
-    width: 60px;
+    width: 40px;
     margin: 15px 50px;
     object-fit: scale-down;
 }
