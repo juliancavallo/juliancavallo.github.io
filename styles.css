@@ -3,8 +3,8 @@
 }
 
 :root{
-    --primary: #83c5be; /*strong*/
-    --secondary: #f2e9e4; /*sections background*/
+    --primary: #83c5be;
+    --light: #ffffff;
     --dark: #3f3f3f; /*font*/
 }
 
@@ -13,7 +13,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     font-size: 18px;
-    background:linear-gradient(rgba(255, 255, 255, 0.8), rgba(20,20,20,0.5)),url("images/background.jpg");
+    background:linear-gradient(lightgray 40%, black),url("images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: screen;
@@ -41,7 +41,8 @@ a:hover{
 }
 
 #presentation h1 {
-    color: var(--dark);
+    color: var(--primary);
+    filter: contrast(2) brightness(0.5)
 
 }
 
@@ -60,7 +61,7 @@ section{
 
 #info{
     background-color: transparent;
-    backdrop-filter: brightness(0.7);
+    backdrop-filter: brightness(0.8);
 }
 
 .programming-languajes{
@@ -88,21 +89,17 @@ section{
 }
 
 .card-header:hover .card-header-title{
-    color: var(--secondary);
+    color: var(--light);
 }
 
 .card-header[aria-expanded="true"] .card-header-title{
-
-    color: var(--secondary);
+    color: var(--light);
 }
 
 .card-header[aria-expanded="true"] {    
     background-color: var(--dark);
 }
 
-#accordion section{
-    background-color: rgba(255, 255, 255, 0.7);
-}
 
 .wrapper {
     display: flex;
@@ -140,8 +137,8 @@ li{
     margin: 4vh 2vw;
     border: 1px solid var(--dark);
     box-shadow: var(--dark) 5px 5px 8px;
-    background-color: transparent;
     overflow: hidden;
+    background-color: var(--light);
 }
 
 .card-header{
