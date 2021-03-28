@@ -3,10 +3,9 @@
 }
 
 :root{
-    --primary: #465462; /*strong*/
-    --secondary: #626a9eab; /*info background*/
-    --third: #ffffffce; /*sections background*/
-    --fourth: #242b31; /*font*/
+    --primary: #83c5be; /*strong*/
+    --secondary: #f2e9e4; /*sections background*/
+    --dark: #3f3f3f; /*font*/
 }
 
 body{
@@ -14,14 +13,14 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     font-size: 18px;
-    background:linear-gradient(white, rgba(33, 103, 160, 0.383)),url("images/background.jpg");
+    background:linear-gradient(rgba(255, 255, 255, 0.8), rgba(20,20,20,0.5)),url("images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: screen;
 }
 
 p, h1, h2, h3, h4, h5, a, li{
-    color: var(--fourth);
+    color: var(--dark);
     font-weight: 500;
     letter-spacing: 2px;
 }
@@ -42,7 +41,7 @@ a:hover{
 }
 
 #presentation h1 {
-    color: var(--primary);
+    color: var(--dark);
 
 }
 
@@ -51,7 +50,7 @@ a:hover{
     height: 160px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid var(--secondary);
+    border: 4px solid var(--primary);
     margin: 3vh 0 5vh 0;
 }
 
@@ -60,7 +59,8 @@ section{
 }
 
 #info{
-    background-color: var(--secondary);
+    background-color: transparent;
+    backdrop-filter: brightness(0.7);
 }
 
 .programming-languajes{
@@ -83,24 +83,25 @@ section{
 }
 
 .card-header:hover, .card-header:focus{
-    background-color: var(--fourth);
+    background-color: var(--dark);
     cursor: pointer;
 }
 
 .card-header:hover .card-header-title{
-    font-weight: 1000;
+    color: var(--secondary);
 }
 
 .card-header[aria-expanded="true"] .card-header-title{
-    font-weight: 1000;
+
+    color: var(--secondary);
 }
 
 .card-header[aria-expanded="true"] {    
-    background-color: var(--fourth);
+    background-color: var(--dark);
 }
 
 #accordion section{
-    background-color: var(--third);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .wrapper {
@@ -137,8 +138,8 @@ li{
 
 .card{
     margin: 4vh 2vw;
-    border: 1px solid black;
-    box-shadow: var(--fourth) 5px 5px 8px;
+    border: 1px solid var(--dark);
+    box-shadow: var(--dark) 5px 5px 8px;
     background-color: transparent;
     overflow: hidden;
 }
@@ -153,7 +154,7 @@ li{
 }
 
 .card-header h5{
-    color: var(--third) ;
+    color: var(--dark) ;
 }
 
 
@@ -161,7 +162,7 @@ li{
 #btnScrollDown{
     font-size: 55px;
     transition: 0.3s;
-    color: var(--secondary);
+    color: var(--primary);
     display: inline-block;
     -webkit-animation: slide-top 5s linear infinite alternate both;
 	        animation: slide-top 5s linear infinite alternate both;
@@ -226,16 +227,15 @@ li{
 .project{
     padding: 5px;
     margin: 15px;
-    background-color: white;
+    background-color: var(--primary);
     width: 300px;
     border-radius: 15px;
-    border: 1px solid var(--secondary);
 }
 
 .project:hover{
     transform: translateX(-3px);
     
-    box-shadow: var(--fourth) 5px 5px 8px;
+    box-shadow: var(--dark) 5px 5px 8px;
 }
 
 .project img{
@@ -246,7 +246,7 @@ li{
 
 .github-link:hover{
     font-weight: bold;
-    color: var(--fourth);
+    color: var(--dark);
 }
 
 /*About me*/
@@ -259,4 +259,14 @@ li{
 #social img{
     height: 70px;
     object-fit: scale-down;
+}
+
+.media-icons i{
+    font-size: xx-large;
+    margin: 15px;
+    color: var(--dark)
+}
+
+.media-icons i:hover{
+    color: var(--primary)
 }
