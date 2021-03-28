@@ -3,9 +3,39 @@
 }
 
 :root{
-    --primary: #83c5be;
     --light: #ffffff;
-    --dark: #3f3f3f; /*font*/
+    --dark: #3f3f3f;
+}
+
+#themeSelector{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.theme-item{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.theme-turquoise{
+    --primary: #83c5be;
+}
+
+.theme-orange{
+    --primary: #e2a55f;
+}
+
+.theme-green{
+    --primary: #79b954;
+}
+
+.theme-yellow{
+    --primary: #d9db64;
 }
 
 body{
@@ -210,6 +240,11 @@ li{
     .programming-languajes img{
         margin: 15px 20px;
     }
+
+    #themeSelector{
+        position: absolute;
+    }
+
 }
 
 

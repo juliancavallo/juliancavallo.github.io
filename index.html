@@ -12,7 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="theme-turquoise">
+    <nav id="themeSelector">
+        <a class="theme-item" name="theme-turquoise" style="background-color: #83c5be;" ></a>
+        <a class="theme-item" name="theme-orange" style="background-color: #e2a55f;"></a>
+        <a class="theme-item" name="theme-green" style="background-color: #79b954;"></a>
+        <a class="theme-item" name="theme-yellow" style="background-color: #d9db64;"></a>
+    </nav>
+
     <section id="presentation">
         <h1 class="title">Julián Cavallo</h1>
         <div class="profile">
@@ -33,6 +40,7 @@
             Interamericana, and I'm currently studying for the Systems Engineering degree. </p>
         <i id="btnScrollDown" class="fas fa-sort-down"></i>
     </section>
+    
     <section id="info">
         <div id="accordion">
 
@@ -214,13 +222,7 @@
         </div>
     </section>
 
-    <script>
-        document.getElementById("btnScrollDown").addEventListener("click", () => {
-            const sectionToScroll = document.getElementById("info");
-            sectionToScroll.scrollIntoView({behavior: "smooth"});
-        });
-
-    </script>
+    <script src="app.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
