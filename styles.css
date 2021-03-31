@@ -23,7 +23,7 @@
 }
 
 .theme-turquoise{
-    --primary: #83c5be;
+    --primary: #4ca198;
 }
 
 .theme-orange{
@@ -31,12 +31,17 @@
 }
 
 .theme-green{
-    --primary: #79b954;
+    --primary: #48ac4b;
 }
 
 .theme-yellow{
-    --primary: #d9db64;
+    --primary: #b9ba6b;
 }
+
+.theme-red{
+    --primary: #ac4848;
+}
+
 
 body{
     text-align: center;
@@ -68,7 +73,7 @@ a:hover{
 }
 
 /*Presentation*/
-#presentation p, h4, h1{
+#presentation p,#presentation h4,#presentation h1{
     text-align: left;
 }
 
@@ -145,7 +150,7 @@ section{
 }
 
 .col{
-    margin: 0.8vh 1.83vw;
+    margin: 0.8vh 1.5vw;
 }
 
 .col-title{
@@ -187,7 +192,7 @@ li{
 }
 
 .card-header h5{
-    color: var(--dark) ;
+    color: var(--light) ;
 }
 
 
@@ -232,31 +237,6 @@ li{
   }
   
 
-  @media(max-width: 700px){
-    #presentation h2 {
-        font-size: 40px;
-    }
-
-    .profile img{
-        width: 120px;
-        height: 120px;
-    }
-    
-    .card-header h5{
-        font-size: medium;
-    }
-
-    .programming-languajes img{
-        margin: 15px 20px;
-    }
-
-    #themeSelector{
-        position: absolute;
-    }
-
-}
-
-
 /*Projects*/
 #projects{
     display: flex;
@@ -273,6 +253,14 @@ li{
     border-radius: 15px;
 }
 
+.project a{
+    display: block
+}
+
+.project h5, .project a, .project i{
+    color: var(--light)
+}
+
 .project:hover{
     transform: translateX(-3px);
     
@@ -285,7 +273,7 @@ li{
     width: 270px;
 }
 
-.github-link:hover{
+.github-link:hover, .github-link:hover i{
     font-weight: bold;
     color: var(--dark);
 }
@@ -310,4 +298,40 @@ li{
 
 .media-icons i:hover{
     color: var(--primary)
+}
+
+
+@media(max-width: 700px){
+    #presentation h2 {
+        font-size: 40px;
+    }
+
+    .profile img{
+        width: 120px;
+        height: 120px;
+    }
+    
+    .card-header h5{
+        font-size: medium;
+    }
+
+    .programming-languajes img{
+        margin: 15px 20px;
+    }
+
+    #themeSelector{
+        position: absolute;
+    }
+
+    .project{
+        width: 200px;
+    }
+
+    .project img{
+        width: 170px;
+    }
+
+    .project h5, .project a, .project i{
+        font-size: 1rem;
+    }
 }
