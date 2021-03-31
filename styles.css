@@ -49,6 +49,12 @@ body{
     background-blend-mode: screen;
 }
 
+
+footer{
+    position: relative;
+    bottom: 0;
+}
+
 p, h1, h2, h3, h4, h5, a, li{
     color: var(--dark);
     font-weight: 500;
@@ -99,7 +105,7 @@ section{
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
-    margin: 5px 10px;
+    margin: 25px 10px;
 }
 
 .programming-languajes img{
@@ -187,6 +193,9 @@ li{
 
 /*Scroll down btn*/
 #btnScrollDown{
+    position: sticky;
+    bottom: 0;
+    filter: contrast(2) brightness(0.5);
     font-size: 55px;
     transition: 0.3s;
     color: var(--primary);
