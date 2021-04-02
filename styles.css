@@ -251,7 +251,6 @@ li{
     padding: 5px;
     margin: 15px;
     background-color: var(--primary);
-    width: 300px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -276,7 +275,7 @@ li{
 .project img{
     margin: 10px 5px;
     object-fit: cover;
-    width: 270px;
+    max-width: 400px;
 }
 
 .github-link:hover, .github-link:hover i{
@@ -321,12 +320,9 @@ li{
         position: absolute;
     }
 
-    .project{
-        width: 200px;
-    }
-
     .project img{
-        width: 170px;
+        
+        max-width: 60vw;;
     }
 
     .card{
