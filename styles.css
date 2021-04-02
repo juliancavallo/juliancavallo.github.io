@@ -62,13 +62,12 @@ footer{
 
 p, h1, h2, h3, h4, h5, a, li{
     color: var(--dark);
-    font-weight: 500;
     letter-spacing: 2px;
 }
 
 a:hover{
     text-decoration: none;
-    color:black;
+    color:var(--primary);
     font-weight: 900;
 }
 
@@ -102,6 +101,7 @@ section{
 
 #info{
     background-color: transparent;
+    -webkit-backdrop-filter: brightness(0.8);
     backdrop-filter: brightness(0.8);
 }
 
@@ -143,10 +143,8 @@ section{
 
 
 .wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns:  repeat(auto-fill, minmax(255px, 1fr));
 }
 
 .col{
@@ -175,6 +173,7 @@ li{
 }
 
 .card{
+    
     margin: 4vh 2vw;
     border: 1px solid var(--dark);
     box-shadow: var(--dark) 5px 5px 8px;
@@ -183,6 +182,7 @@ li{
 }
 
 .card-header{
+    transition: 0.3s;
     background-color: var(--primary);
 }
 
@@ -196,8 +196,10 @@ li{
 }
 
 
+
 /*Scroll down btn*/
 #btnScrollDown{
+    position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     filter: contrast(2) brightness(0.5);
@@ -251,6 +253,9 @@ li{
     background-color: var(--primary);
     width: 300px;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .project a{
@@ -258,7 +263,8 @@ li{
 }
 
 .project h5, .project a, .project i{
-    color: var(--light)
+    color: var(--light);
+    padding: 0 5px;
 }
 
 .project:hover{
@@ -302,17 +308,9 @@ li{
 
 
 @media(max-width: 700px){
-    #presentation h2 {
-        font-size: 40px;
-    }
-
     .profile img{
         width: 120px;
         height: 120px;
-    }
-    
-    .card-header h5{
-        font-size: medium;
     }
 
     .programming-languajes img{
@@ -331,7 +329,12 @@ li{
         width: 170px;
     }
 
-    .project h5, .project a, .project i{
+    .card{
         font-size: 1rem;
+    }
+
+    .card-header h5, .project h5{
+        white-space: normal;
+        font-size: 1.2rem;
     }
 }

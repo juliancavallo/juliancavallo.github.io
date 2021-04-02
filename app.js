@@ -11,6 +11,14 @@ document.getElementById("btnScrollDown").addEventListener("click", () => {
     
 });
 
+document.querySelectorAll('.card-header').forEach(c => c.addEventListener('click', function (e) {
+    const expanding = e.currentTarget.ariaExpanded == "false";
+    
+    /*if(expanding)
+        c.parentElement.scrollIntoView({ behavior: "smooth"});*/
+}));
+
+
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (rect.bottom > 0 &&
