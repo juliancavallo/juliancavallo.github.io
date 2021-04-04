@@ -248,6 +248,7 @@ li{
 }
 
 .project{
+    transition: 0.2s;
     padding: 5px;
     margin: 15px;
     background-color: var(--primary);
@@ -273,6 +274,7 @@ li{
 }
 
 .project img{
+    border-radius: 15px;
     margin: 10px 5px;
     object-fit: cover;
     max-width: 400px;
