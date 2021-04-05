@@ -241,16 +241,19 @@ li{
 
 /*Projects*/
 #projects{
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
+    column-gap: 15px;
+    row-gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(autofill, 3, 1fr);
+    grid-template-columns: repeat(auto-fill, 310px);
     justify-content: center;
 }
 
 .project{
     transition: 0.2s;
+    width: 90%;
     padding: 5px;
-    margin: 15px;
+    margin: auto;
     background-color: var(--primary);
     border-radius: 15px;
     display: flex;
@@ -265,6 +268,7 @@ li{
 .project h5, .project a, .project i{
     color: var(--light);
     padding: 0 5px;
+    margin: 5px 0px;
 }
 
 .project:hover{
@@ -274,10 +278,10 @@ li{
 }
 
 .project img{
+    margin: 5px 0;
     border-radius: 15px;
-    margin: 10px 5px;
+    width: 100%; 
     object-fit: cover;
-    max-width: 400px;
 }
 
 .github-link:hover, .github-link:hover i{
@@ -320,11 +324,6 @@ li{
 
     #themeSelector{
         position: absolute;
-    }
-
-    .project img{
-        
-        max-width: 60vw;;
     }
 
     .card{
