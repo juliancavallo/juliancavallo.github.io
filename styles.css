@@ -251,8 +251,8 @@ li{
 
 .project{
     transition: 0.2s;
-    width: 100%;
-    padding: 5px;
+    width: 90%;
+    padding: 10px;
     margin: auto;
     background-color: var(--primary);
     border-radius: 15px;
@@ -271,6 +271,13 @@ li{
     margin: 5px 0px;
 }
 
+.project h5 {
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .project:hover{
     transform: translateX(-3px);
     
@@ -284,9 +291,14 @@ li{
     object-fit: cover;
 }
 
-.github-link:hover, .github-link:hover i{
+.link{
+    text-align: left;
+}
+
+.link:hover, .link:hover i{
     font-weight: bold;
     color: var(--dark);
+    transition: 0.3s;
 }
 
 /*About me*/
