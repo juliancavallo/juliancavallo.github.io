@@ -1,3 +1,5 @@
+import {parseToJSON} from "/jsonToCSVParser.js";
+
 document.getElementById("btnScrollDown").addEventListener("click", () => {
     const currentSection = document.getElementById("presentation");
     const sectionToScroll = document.getElementById("info");
@@ -42,6 +44,19 @@ function loadTheme() {
         setTheme("theme-turquoise");
 }
 
+
+async function loadExperience(){
+    const response = await fetch(
+        `https://docs.google.com/spreadsheets/d/e/2PACX-1vQD1kwfjpHFrgMuyIzgx8TA80lAgZlSR1OhLfY9NMgcCFX7BTaUaOmYTrGbIxfnx1PjY4ZChEQWfU08/pub?output=csv`);
+    
+    const csv = await response.text();
+    const json = parseToJSON(csv);
+
+    const description = json.filter(x => x.key == "experience")[0];
+    document.getElementById("experience").innerHTML = description.value;
+
+}
+
 (function () {
     loadTheme();
 
@@ -51,4 +66,5 @@ function loadTheme() {
         })
     })
 
+    loadExperience();
 })();
