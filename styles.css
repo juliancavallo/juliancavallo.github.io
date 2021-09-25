@@ -114,9 +114,13 @@ section{
 }
 
 .programming-languajes img{
-    width: 40px;
+    width: 45px;
     margin: 15px 50px;
     object-fit: scale-down;
+}
+
+.img-resize {
+    width: 70px !important;
 }
 
 /*Accordion*/

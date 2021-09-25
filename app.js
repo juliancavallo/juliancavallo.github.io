@@ -16,8 +16,6 @@ document.getElementById("btnScrollDown").addEventListener("click", () => {
 document.querySelectorAll('.card-header').forEach(c => c.addEventListener('click', function (e) {
     const expanding = e.currentTarget.ariaExpanded == "false";
     
-    /*if(expanding)
-        c.parentElement.scrollIntoView({ behavior: "smooth"});*/
 }));
 
 
@@ -52,8 +50,11 @@ async function loadExperience(){
     const csv = await response.text();
     const json = parseToJSON(csv);
 
-    const description = json.filter(x => x.key == "experience")[0];
-    document.getElementById("experience").innerHTML = description.value;
+    for (let i = 0; i < json.values.length; i++) {
+        const p = '<p>' + json.values[i] + '</p>';
+                
+        document.getElementById("experience").innerHTML += p;
+    }
 
 }
 
