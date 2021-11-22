@@ -327,6 +327,11 @@ li{
     color: var(--primary)
 }
 
+/*Experience*/
+#experience{
+    text-align: left;
+}
+
 
 @media(max-width: 700px){
     .profile img{
