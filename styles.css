@@ -47,7 +47,6 @@ body{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    font-size: 18px;
     background:linear-gradient(lightgray 40%, black),url("images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -276,6 +275,7 @@ li{
 }
 
 .project h5 {
+    font-size: 1rem;
     height: 35px;
     display: flex;
     justify-content: center;
