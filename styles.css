@@ -47,7 +47,7 @@ body{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background:linear-gradient(lightgray 40%, black),url("images/background.jpg");
+    background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: screen;
