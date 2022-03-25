@@ -75,10 +75,6 @@ a:hover{
     text-align: left;
 }
 
-#presentation{
-    min-height: 100vh;
-}
-
 #presentation h1 {
     color: var(--primary);
     filter: contrast(2) brightness(0.5)
@@ -146,12 +142,17 @@ section{
 
 
 .wrapper {
-    display: grid;
-    grid-template-columns:  repeat(auto-fill, minmax(255px, 1fr));
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 1;
 }
 
 .col{
     margin: 0.8vh 1.5vw;
+    flex: 1;
+    width: auto;
 }
 
 .col-title{
@@ -198,49 +199,6 @@ li{
     color: var(--light) ;
 }
 
-
-
-/*Scroll down btn*/
-#btnScrollDown{
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    filter: contrast(2) brightness(0.5);
-    font-size: 55px;
-    transition: 0.3s;
-    color: var(--primary);
-    display: inline-block;
-    -webkit-animation: slide-top 5s linear infinite alternate both;
-	        animation: slide-top 5s linear infinite alternate both;
-    text-align: center;
-}
-
-#btnScrollDown:hover{
-    cursor: pointer;
-    opacity: 50%;
-}
-
-@-webkit-keyframes slide-top {
-    0% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-    }
-    100% {
-      -webkit-transform: translateY(-3vh);
-              transform: translateY(-3vh);
-    }
-  }
-  @keyframes slide-top {
-    0% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-    }
-    100% {
-      -webkit-transform: translateY(-3vh);
-              transform: translateY(-3vh);
-    }
-  }
-  
 
 /*Projects*/
 #projects{
@@ -311,7 +269,9 @@ li{
     flex-direction: column;
     margin: 25px 50px;
     align-items: center;
+    flex: 1;
 }
+
 #social img{
     height: 70px;
     object-fit: scale-down;
@@ -334,6 +294,10 @@ li{
 
 
 @media(max-width: 700px){
+    .wrapper{
+        flex-direction: column;
+    }
+
     .profile img{
         width: 120px;
         height: 120px;
