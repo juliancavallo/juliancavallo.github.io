@@ -1,32 +1,9 @@
 import {parseToJSON} from "/jsonToCSVParser.js";
 
-document.getElementById("btnScrollDown").addEventListener("click", () => {
-    const currentSection = document.getElementById("presentation");
-    const sectionToScroll = document.getElementById("info");
-
-    const bottom = Math.floor($(currentSection).outerHeight() - window.innerHeight);
-
-    if($(window).scrollTop() >= bottom)
-        sectionToScroll.scrollIntoView({behavior: "smooth"});
-    else
-        currentSection.scrollIntoView({block:"end", behavior: "smooth"});
-    
-});
-
 document.querySelectorAll('.card-header').forEach(c => c.addEventListener('click', function (e) {
     const expanding = e.currentTarget.ariaExpanded == "false";
     
 }));
-
-
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (rect.bottom > 0 &&
-        rect.right > 0 &&
-        rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
-        rect.top < (window.innerHeight || document.documentElement.clientHeight));
-}
-
 
 function setTheme(themeName) {
     localStorage.setItem('theme', themeName);

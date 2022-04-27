@@ -3,8 +3,8 @@
 }
 
 :root{
-    --light: #ffffff;
-    --dark: #3f3f3f;
+    --dark: #2e2e2e;
+    --bright: rgb(230, 230, 230);
 }
 
 #themeSelector{
@@ -27,7 +27,7 @@
 }
 
 .theme-orange{
-    --primary: #e2a55f;
+    --primary: #cf9859;
 }
 
 .theme-green{
@@ -39,15 +39,16 @@
 }
 
 .theme-red{
-    --primary: #ac4848;
+    --primary: #c45252;
 }
 
 
 body{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    font-size: large;
     margin: 0;
-    background-color: white;
+    background-color: rgb(58, 58, 58);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: screen;
@@ -60,7 +61,7 @@ footer{
 }
 
 p, h1, h2, h3, h4, h5, a, li{
-    color: var(--dark);
+    color: var(--bright);
     letter-spacing: 2px;
 }
 
@@ -77,8 +78,7 @@ a:hover{
 
 #presentation h1 {
     color: var(--primary);
-    filter: contrast(2) brightness(0.5)
-
+    font-weight: bolder;
 }
 
 .profile img{
@@ -88,6 +88,7 @@ a:hover{
     border-radius: 50%;
     border: 4px solid var(--primary);
     margin: 3vh 0 5vh 0;
+    background-color: var(--bright);
 }
 
 section{
@@ -124,20 +125,20 @@ section{
 }
 
 .card-header:hover, .card-header:focus{
-    background-color: var(--dark);
+    background-color: var(--bright);
     cursor: pointer;
 }
 
 .card-header:hover .card-header-title{
-    color: var(--light);
+    color: var(--dark);
 }
 
 .card-header[aria-expanded="true"] .card-header-title{
-    color: var(--light);
+    color: var(--dark);
 }
 
 .card-header[aria-expanded="true"] {    
-    background-color: var(--dark);
+    background-color: var(--bright);
 }
 
 
@@ -177,12 +178,10 @@ li{
 }
 
 .card{
-    
     margin: 4vh 2vw;
-    border: 1px solid var(--dark);
-    box-shadow: var(--dark) 5px 5px 8px;
+    border: 1px solid var(--bright);
     overflow: hidden;
-    background-color: var(--light);
+    background-color: var(--dark);
 }
 
 .card-header{
@@ -196,7 +195,8 @@ li{
 }
 
 .card-header h5{
-    color: var(--light) ;
+    color: var(--dark);
+    font-weight: bolder;
 }
 
 
@@ -226,15 +226,14 @@ li{
     display: block
 }
 
-.project h5, .project a, .project i{
-    color: var(--light);
+.project p, .project a, .project i{
     padding: 0 5px;
     margin: 5px 0px;
 }
 
-.project h5 {
-    font-size: 1rem;
+.project p {
     height: 35px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,7 +242,7 @@ li{
 .project:hover{
     transform: translateX(-3px);
     
-    box-shadow: var(--dark) 5px 5px 8px;
+    box-shadow: var(--bright) 5px 5px 10px;
 }
 
 .project img{
@@ -259,7 +258,7 @@ li{
 
 .link:hover, .link:hover i{
     font-weight: bold;
-    color: var(--dark);
+    color: var(--bright);
     transition: 0.3s;
 }
 
@@ -280,16 +279,27 @@ li{
 .media-icons i{
     font-size: xx-large;
     margin: 15px;
-    color: var(--dark)
 }
 
 .media-icons i:hover{
     color: var(--primary)
 }
 
+#social-media{
+    color: var(--bright)
+}
+
 /*Experience*/
 #experience{
     text-align: left;
+}
+
+#experience  a{
+    color: var(--primary);
+}
+
+#experience a:hover{
+    color: var(--bright);
 }
 
 
