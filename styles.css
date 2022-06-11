@@ -178,7 +178,7 @@ li{
 }
 
 .card{
-    margin: 4vh 2vw;
+    margin: 4vh 0vw;
     border: 1px solid var(--bright);
     overflow: hidden;
     background-color: var(--dark);
@@ -202,11 +202,11 @@ li{
 
 /*Projects*/
 #projects{
-    column-gap: 25px;
-    row-gap: 25px;
+    column-gap: 40px;
+    row-gap: 40px;
     display: grid;
     grid-template-columns: repeat(autofill, 3, 1fr);
-    grid-template-columns: repeat(auto-fill, 310px);
+    grid-template-columns: repeat(auto-fill, 450px);
     justify-content: center;
 }
 
@@ -240,9 +240,7 @@ li{
 }
 
 .project:hover{
-    transform: translateX(-3px);
-    
-    box-shadow: var(--bright) 5px 5px 10px;
+    transform:scale(1.05);
 }
 
 .project img{
@@ -327,5 +325,12 @@ li{
 
     .card-header h5, .project h5{
         white-space: normal;
+    }
+
+    #projects{
+        column-gap: 25px;
+        row-gap: 25px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 310px);
     }
 }
