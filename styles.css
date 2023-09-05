@@ -3,8 +3,8 @@
 }
 
 :root{
-    --dark: #2e2e2e;
-    --bright: rgb(230, 230, 230);
+    --dark: #42423d;
+    --bright: #f3f0e8;
 }
 
 #themeSelector{
@@ -27,11 +27,11 @@
 }
 
 .theme-orange{
-    --primary: #cf9859;
+    --primary: #cd9e7c;
 }
 
 .theme-green{
-    --primary: #64a966;
+    --primary: #8ca77f;
 }
 
 .theme-yellow{
@@ -39,7 +39,7 @@
 }
 
 .theme-red{
-    --primary: #c45252;
+    --primary: #bd7c7c;
 }
 
 
